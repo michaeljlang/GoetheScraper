@@ -1,10 +1,6 @@
 import re 
 import spacy
 
-
-nlp = spacy.load('es_core_news_sm')
-nlp_de = spacy.load("de_core_news_sm")
-
 def get_meta(meta, meta_de, titles, titles_de):
 
 	""" 
@@ -18,7 +14,7 @@ def get_meta(meta, meta_de, titles, titles_de):
 	# Process German metadata
 	authors_de = {}
 	original_lang_de = {}
-
+	nlp_de = spacy.load("de_core_news_sm")
 	for key,values in meta_de.items():
 	    for k,v in values.items():
 
