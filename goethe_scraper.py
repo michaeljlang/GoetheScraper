@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup as bs
 def goethe_scraper(set_of_links):
 
     """
-    Cleans the text extracted from each article
+    Cleans the text extracted text from each article
     Args:
         set_of_links: list. all the links to the Spanish articles
     Returns:
