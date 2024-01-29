@@ -4,7 +4,7 @@ GoetheScraper is designed to retrieve all bilingual text articles from the Germa
 
 The tool was developed by Michael Lang through the PaCorEs research group at the University of Santiago de Compostela in Galicia, Spain.
 
-GoetheScraper primarily replies on selenium webdriver to automatically retrieve the the links and BeautifulSoup to process the text.
+GoetheScraper primarily replies on Selenium WebDriver to automatically retrieve the the links and BeautifulSoup to process the text.
 
 NOTE: The code requires Google Chrome to carry out the webscraping process, although selenium also supports other browsers, such as Edge and Firefox, among others. The code should be altered in order to use a browser other than Chrome. 
 
