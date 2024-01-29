@@ -20,14 +20,22 @@ GoetheScraper will generate six files:
 4) articles_de.json:  A dictionary containing  all articles in German, structured as { <article_id> : text }.
 5) metadata.txt: A text file with all available metadata structured as follows:
 
-    Enlace (es): 
+    Enlace (es):
+   
     Enlace (de):
-    Lengua de origen: 
-    Título en español: 
+   
+    Lengua de origen:
+    
+    Título en español:
+   
     Título en alemán:
+   
     Autor/a:
+
     Traducción (es):
+
     Traducción (de): 
+
     Fecha: 
   
 6) links.txt: A text file containing all the links to the articles in Spanish. The links to the German articles are generated within the code by altering the Spanish url.
