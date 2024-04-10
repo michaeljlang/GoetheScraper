@@ -2,7 +2,7 @@
 
 GoetheScraper is designed to retrieve all bilingual text articles from the German-Spanish Kultur magazine, an online publication by the Goethe Institut.
 
-The tool was developed by Michael Lang through the PaCorEs research group at the University of Santiago de Compostela in Galicia, Spain.
+The tool was developed by Michael Lang through the PaCorEs research group at the University of Santiago de Compostela in Galicia, Spain, and funded by the following grant: **Corpus paralelos online del español PID2021-125313OB-I00. Agencia Estatal de Investigación**
 
 GoetheScraper primarily replies on Selenium WebDriver to automatically retrieve the links and BeautifulSoup to process the text.
 
