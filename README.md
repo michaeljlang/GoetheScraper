@@ -14,11 +14,11 @@ To run the code, execute the scrape.py file. This can be done from the command l
 
 GoetheScraper will generate six files:
 
-1) articles_es.txt: A clean text file containing all articles in Spanish with their corresponding id number.
-2) articles_es.json:  A Python dictionary containing  all articles in Spanish, structured as { <article_id> : text }.
-3) articles_de.txt: A clean text file containing all articles in German with their corresponding id number.
-4) articles_de.json:  A Python dictionary containing  all articles in German, structured as { <article_id> : text }.
-5) metadata.txt: A text file with all available metadata structured as follows:
+1) *articles_es.txt* - A clean text file containing all articles in Spanish with their corresponding id number.
+2) *articles_es.json* -  A Python dictionary containing  all articles in Spanish, structured as { <article_id> : text }.
+3) *articles_de.txt* - A clean text file containing all articles in German with their corresponding id number.
+4) *articles_de.json* -  A Python dictionary containing  all articles in German, structured as { <article_id> : text }.
+5) *metadata.txt* - A text file with all available metadata structured as follows:
 
     Enlace (es):
    
@@ -38,7 +38,7 @@ GoetheScraper will generate six files:
 
     Fecha: 
   
-6) links.txt: A text file containing all the links to the articles in Spanish. The links to the German articles are generated within the code by altering the Spanish url.
+6) *links.txt* - A text file containing all the links to the articles in Spanish. The links to the German articles are generated within the code by altering the Spanish url.
 
 The articles_{language}.json files allow for the articles to be easily loaded into Python, while the articles_{language}.txt files are intended to be aligned as is.
 
