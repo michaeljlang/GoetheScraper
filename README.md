@@ -2,11 +2,11 @@
 
 GoetheScraper is designed to retrieve all bilingual text articles from the German-Spanish Kultur magazine, an online publication by the Goethe Institut.
 
-The tool was developed by Michael Lang through the PaCorEs research group at the University of Santiago de Compostela in Galicia, Spain, and funded by the following grant: **Corpus paralelos online del español PID2021-125313OB-I00. Agencia Estatal de Investigación**
+The tool was developed by Michael Lang through the PaCorEs research group at the University of Santiago de Compostela in Galicia, Spain, and funded through the following grant: **Corpus paralelos online del español PID2021-125313OB-I00. Agencia Estatal de Investigación**
 
-GoetheScraper primarily replies on Selenium WebDriver to automatically retrieve the links and BeautifulSoup to process the text.
+GoetheScraper relies primarily on Selenium WebDriver to automatically retrieve the links and BeautifulSoup to process the text.
 
-NOTE: The code requires Google Chrome to carry out the webscraping process, although Selenium also supports other browsers, such as Edge and Firefox, among others. The code must be altered in order to use a browser other than Chrome. 
+NOTE: The code requires Google Chrome to carry out the webscraping process, although Selenium also supports other browsers, such as Edge and Firefox, among others. However, the code must be altered in order to use a browser other than Chrome. 
 
 To run the code, execute the scrape.py file. This can be done from the command line. This will create a new directory, "Goethe", where all files will be saved. 
 
@@ -15,9 +15,9 @@ To run the code, execute the scrape.py file. This can be done from the command l
 GoetheScraper will generate six files:
 
 1) articles_es.txt: A clean text file containing all articles in Spanish with their corresponding id number.
-2) articles_es.json:  A dictionary containing  all articles in Spanish, structured as { <article_id> : text }.
+2) articles_es.json:  A Python dictionary containing  all articles in Spanish, structured as { <article_id> : text }.
 3) articles_de.txt: A clean text file containing all articles in German with their corresponding id number.
-4) articles_de.json:  A dictionary containing  all articles in German, structured as { <article_id> : text }.
+4) articles_de.json:  A Python dictionary containing  all articles in German, structured as { <article_id> : text }.
 5) metadata.txt: A text file with all available metadata structured as follows:
 
     Enlace (es):
@@ -40,6 +40,8 @@ GoetheScraper will generate six files:
   
 6) links.txt: A text file containing all the links to the articles in Spanish. The links to the German articles are generated within the code by altering the Spanish url.
 
-The articles_{language}.json files allow for the articles to be easily loaded in Python, while the articles_{language}.txt files are intended to be aligned as is.
+The articles_{language}.json files allow for the articles to be easily loaded into Python, while the articles_{language}.txt files are intended to be aligned as is.
 
-At the time of writing, the code will extract approximately 515 links to articles (pages dedicated to videos/interviews are discarded outright), of which around 510 articles will be correctly processed. Issues that may cause an article to be discarded include: the lack of bilingual version, the inability to adequately remove all HTML code, and inconsistencies in HTML structure and labeling. 
+At the time of writing, the code will extract approximately 515 links to articles (pages dedicated to videos/interviews are discarded outright), of which around 510 articles will be correctly processed. Issues that may cause an article to be discarded include: the lack of a bilingual version, the inability to adequately remove all HTML code, and inconsistencies in HTML structure and labeling. 
+
+**NOTE: While generally infrequent, cases have been found where there is additional text in one of the original articles, usually an extra sentence or two. This is not accounted for in the code and should be considered when reviewing the alignments.**
