@@ -1,5 +1,3 @@
-# import requests
-# import urllib.request
 import re
 import time
 import json
@@ -10,11 +8,7 @@ from meta import *
 from goethe_scraper import *
 
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.support.ui import WebDriverWait
@@ -28,10 +22,9 @@ if os.path.exists("Goethe") == False:
     os.mkdir("Goethe")
     os.chdir("Goethe")
     print("New folder created: Goethe")
-    print("New working directory:", os.getcwd())
 elif current_path.split("/")[-1] != "Goethe":
     os.chdir("Goethe")
-    print("New working directory:", os.getcwd())
+print("New working directory:", os.getcwd())
 
 
 # ------------ Obtaining links to the articles ------------
