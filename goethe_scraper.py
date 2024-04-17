@@ -31,7 +31,7 @@ def goethe_scraper(set_of_links):
         ("Foto:.*",""),
         ("\n \n \n \n \n \n \n|\n \n \n|\n \n","\n"),
         ("\n\xa0\n","\n"),
-        ("\xa0",""),
+        ("\xa0"," "),
         ("\n ","\n")
     ]
 
@@ -131,7 +131,11 @@ def goethe_scraper(set_of_links):
         for old, new in replacements:
             final = re.sub(old,new,final)
             metadata = re.sub(old,new,metadata)
-
+        
+        while len(re.findall("[a-z][.?!][A-Z¿]", final)) != 0:
+            place = re.search("[a-z][.?!][A-Z¿]", final)
+            final = final[:place.span()[0]+2] + " " + final[place.span()[0]+2:]
+            
         comentarios = re.search(" \n\d* Comentarios \n", metadata)
         if comentarios != None:
             comentarios = comentarios.span()[0]
@@ -139,14 +143,14 @@ def goethe_scraper(set_of_links):
 
 
         # drop metadata from text
-        loc = final.find(metadata)
+        loc = final.find(metadata[:50])
         if loc > 0:
             final = final[:loc]
 
         for mark in markers:
             if mark in final:
                 final=final[:final.find(mark)]
-
+            
         comentarios = re.search("\n\d* Comentarios \n", final)
         if comentarios != None:
             comentarios = comentarios.span()[0]
