@@ -32,7 +32,8 @@ def goethe_scraper(set_of_links):
         ("\n \n \n \n \n \n \n|\n \n \n|\n \n","\n"),
         ("\n\xa0\n","\n"),
         ("\xa0"," "),
-        ("\n ","\n")
+        ("\n ","\n"),
+        ("Foto \([dD]eta[il]le?\): \n?","")
     ]
 
     markers = [ 
