@@ -12,7 +12,7 @@ def remove_leftovers(article_text):
     Returns:
         final_text: the string with the remaining html removed.
     """
-    replace = [("window.GenPopupCaption.*;xyx321}",""),("frageblock.*]]>",""),
+    replace = [("xyx321window\. ?GenPopupCaption.*?;xyx321}",""),("frageblock.*]]>",""),
                ("function CaptionImage.*;xyx321}","")]
     text = re.sub("\n","xyx321",article_text)
     for old, new in replace:
