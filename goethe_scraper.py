@@ -160,7 +160,7 @@ def goethe_scraper(set_of_links):
         if final[-1] == "\n":
             final = final.rstrip(final[-1])
 
-        if "window.GenPopupCaption = function() {" in final or "frageblock" in final or "CaptionImageGallery" in final:
+        if "GenPopupCaption = function() {" in final or "frageblock" in final or "CaptionImageGallery" in final:
             final = remove_leftovers(final)
 
         if "</div>" in final:
